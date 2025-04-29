@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  font-family: "Manrope";
+  background-color: hsl(210, 46%, 95%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 320px;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+p {
+  margin: 0;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.article-picture {
+  width: 250px;
+  object-fit: cover;
+}
+
+.article-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: hsl(0, 0%, 100%);
+  max-width: 350px;
+}
+
+.article-title {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.article-description {
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.article-author {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.article-author-avatar {
+  width: 32px;
+  height: 32px;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  margin-right: 1rem;
+}
+
+.article-author-infos {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-author-name {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.article-publication-date {
+  color: hsl(212, 23%, 69%);
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.share-icon {
+  height: 12px;
+  width: 12px;
+}
+
+.article-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.share-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210, 46%, 95%);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  width: 32px;
+  height: 32px;
+}
+
+.share-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+}
+
+.share-block-box {
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  width: 200px;
+  padding: 1rem;
+}
+
+.share-block-arrow {
+  width: 0px;
+  height: 0px;
+  border-top: 0.75rem solid hsl(217, 19%, 35%);
+  border-left: 0.75rem solid transparent;
+  border-right: 0.75rem solid transparent;
+}
+
+.tag {
+  color: hsl(214, 17%, 51%);
+  letter-spacing: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@media (max-width: 650px) {
+  .article {
+    flex-direction: column;
+  }
+
+  .article-picture {
+    width: auto;
+    height: 250px;
+  }
+}

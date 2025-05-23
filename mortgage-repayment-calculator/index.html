@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="mortgage__calculator">
+      <form action="get" class="form" id="form">
+        <div class="form__within">
+          <div class="form__heading">
+            <h1>Mortgage Calculator</h1>
+            <button class="form__reset" type="reset">Clear All</button>
+          </div>
+
+          <div class="form__mortgage">
+            <label for="amount">Mortgage Amount</label>
+            <div class="icon__container">
+              <i class="amount__icon icon">£</i>
+              <input type="number" name="amount" id="amount" required />
+            </div>
+          </div>
+
+          <div class="form__term__rate">
+            <div class="term">
+              <label for="term">Mortgage Term</label>
+              <div class="icon__container">
+                <input type="number" name="term" id="term" required />
+                <i class="term__icon icon">years</i>
+              </div>
+            </div>
+            <div class="rate">
+              <label for="interestrate">Interest Rate</label>
+              <div class="icon__container">
+                <input
+                  type="number"
+                  name="interest"
+                  id="interestrate"
+                  required
+                />
+                <i class="interest__icon icon">%</i>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__mortgage__type">
+            <label for="type">Mortgage Type</label>
+            <div class="repayment">
+              <input type="radio" name="type" id="repayment" />
+              <label for="type">Repayment</label>
+            </div>
+            <div class="interest">
+              <input type="radio" name="type" id="interest" />
+              <label for="type">Interest Only</label>
+            </div>
+          </div>
+
+          <div class="form__calc">
+            <button class="form__button" type="submit">
+              Calculate Repayments
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- Empty results start -->
+
+      <div class="results__empty">
+        <div class="results__empty__text">
+          <img src="./assets/images/illustration-empty.svg" alt="" />
+          <h2>Results shown here</h2>
+          <p>
+            Complete the form and click “calculate repayments” to see what your
+            monthly repayments would be.
+          </p>
+        </div>
+      </div>
+      <!-- Empty results end -->
+      <!-- Completed results start -->
+      <div class="results__calculated hidden">
+        <div class="results__calculated__text">
+          <h3>Your results</h3>
+          <p>
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
+          </p>
+          <div class="results__calculated__done">
+            <div class="monthly__repayments">
+              <p class="results__calculated__heading">
+                Your monthly repayments
+              </p>
+              <p class="monthly__repayments__answer">7</p>
+            </div>
+            <hr />
+            <div class="monthly__term">
+              <p class="results__calculated__heading">
+                Total you'll repay over the term
+              </p>
+              <p class="monthly__term__answer">7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Completed results end -->
+    <script src="main.js"></script>
+  </body>
+</html>
